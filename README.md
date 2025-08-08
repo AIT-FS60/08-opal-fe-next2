@@ -5,9 +5,8 @@
 ```bash
 npm install
 ```
-### Инсталляция по порядку:
-  
-npx create-next-app@latest 08-opal-fe-next --typescript  
+### Если что-то не установилось:
+   
 npm install formik yup  
 npm install @reduxjs/toolkit@latest  
 npm install axios clsx tailwind-merge  

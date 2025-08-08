@@ -1,4 +1,4 @@
-## 🚀 Next.js + TypeScript
+##  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="20"/> Next.js + TypeScript + Redux Toolkit + Axios + Tailwind CSS
 
 Перед началом не забудьте выполнить установку зависимостей:
 
@@ -6,16 +6,15 @@
 npm install
 ```
 ### Инсталляция по порядку:
-
-npx create-next-app@latest 08-opal-fe-next --typescript
-npm install formik yup
-npm install @reduxjs/toolkit@latest
-npm install @reduxjs/toolkit@latest 
-npm install axios clsx tailwind-merge
-npm install react-redux
-
-.env:
-NEXT_PUBLIC_API_URL=BACKEND_URL
+  
+npx create-next-app@latest 08-opal-fe-next --typescript  
+npm install formik yup  
+npm install @reduxjs/toolkit@latest  
+npm install axios clsx tailwind-merge  
+npm install react-redux  
+  
+.env:  
+NEXT_PUBLIC_API_URL=BACKEND_URL  
 
 ### 🎨 Стилизация с Tailwind CSS
 

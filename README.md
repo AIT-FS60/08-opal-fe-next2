@@ -1,4 +1,4 @@
-##  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="32"/> Next.js + TypeScript + Redux Toolkit + Axios + Formik + Tailwind CSS
+##  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="26"/> Next.js + TypeScript + Redux Toolkit + Axios + Formik + Tailwind CSS
 
 Перед началом не забудьте выполнить установку зависимостей:
 

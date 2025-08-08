@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 Next.js + TypeScript
 
-## Getting Started
-
-First, run the development server:
+Перед началом не забудьте выполнить установку зависимостей:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+```
+### Инсталляция по порядку:
+
+npx create-next-app@latest 08-opal-fe-next --typescript
+npm install formik yup
+npm install @reduxjs/toolkit@latest
+npm install @reduxjs/toolkit@latest 
+npm install axios clsx tailwind-merge
+npm install react-redux
+
+.env:
+NEXT_PUBLIC_API_URL=BACKEND_URL
+
+### 🎨 Стилизация с Tailwind CSS
+
+Проект уже настроен с использованием **Tailwind CSS**.
+Рекомендуем потратить немного времени на изучение его синтаксиса, чтобы легко и эффективно стилизовать интерфейс.
+
+* Документация: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+
+---
+
+### 📡 Работа с API через Axios
+
+Для отправки запросов используется **Axios**.
+Глобальная конфигурация уже настроена и находится в папке:
+
+```
+/src/lib/axiosInstance.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Поддержка cookie-based аутентификации .
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ⚠️ Обработка ошибок
 
-## Learn More
+Пример обработки серверных ошибок можно найти в **authSlice** (`/features/auth/authSlice.ts`).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✅ Редирект после успешных запросов
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Форма регистрации демонстрирует, как выполнять **редирект** после успешного действия:
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🗂️ Структура проекта
+
+#### 📁 `/app/{name}/page.tsx`
+
+Содержит **страницы приложения**, соответствующие маршрутам (routes).
+
+#### 📁 `/components`
+
+Хранятся **переиспользуемые UI-компоненты** и общие визуальные блоки, не относящиеся напрямую к конкретным фичам.
+
+#### 📁 `/features`
+
+Каждая фича (feature) — это **логически изолированная область приложения**:
+
+```
+features/
+  auth/         # Аутентификация
+  projects/     # Проекты
+  tasks/        # Таски
+```
+
+Внутри каждой фичи:
+
+| Папка       | Назначение                          |
+| ----------- | ----------------------------------- |
+| `slice.ts`  | Redux slice + бизнес-логика         |
+| `services/` | API-запросы, связанные с этой фичей |
+| `types.ts`  | Локальные типы для данной фичи      |
+| `routes.ts` | Список роутов к бекенду             |
+
+#### 📁 `/types`
+
+Глобальные типы, общие для всего приложения (например, `User`, `Tokens`, `ApiError` и т.д.).
+
+---
+

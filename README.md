@@ -1,4 +1,4 @@
-# Next.js Project Tracker
+# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="24" /> Next.js Project Tracker
 ![Next.js](https://img.shields.io/badge/Next.js-15+-000?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-ready-764abc?logo=redux&logoColor=white)

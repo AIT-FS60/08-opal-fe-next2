@@ -1,14 +1,17 @@
-# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="24" /> Next.js + TypeScript + Redux Toolkit + Axios + Formik/Yup + Tailwind CSS
+# Next.js Project Tracker
+![Next.js](https://img.shields.io/badge/Next.js-14+-000?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript&logoColor=white)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-ready-764abc?logo=redux&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3+-38B2AC?logo=tailwindcss&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-configured-5A29E4)
+![Formik](https://img.shields.io/badge/Formik/Yup-forms%20%26%20validation-5C6AC4)
 
-A clean, portfolio-ready starter showing a practical **Next.js** app setup with:
-- **TypeScript** (strict typing)
-- **Redux Toolkit** + **React Redux** (state management)
-- **Axios** (preconfigured instance; cookie-based auth ready)
-- **Formik** + **Yup** (forms & validation)
-- **Tailwind CSS** (fast, consistent styling)
-- Feature-first structure (auth / projects / tasks)
-
-> Use this as a starter or as a **Project Tracker** demo (Projects/Tasks).
+**Next.js + TypeScript** architecture with:
+- **Redux Toolkit** for state management
+- **Axios** with a global instance (cookie-based auth ready)
+- **Formik + Yup** for robust forms/validation
+- **Tailwind CSS** for styling
+- Feature-first folder structure (auth, projects, tasks)
 
 ---
 

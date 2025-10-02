@@ -1,5 +1,5 @@
 # Next.js Project Tracker
-![Next.js](https://img.shields.io/badge/Next.js-14+-000?logo=nextdotjs)
+![Next.js](https://img.shields.io/badge/Next.js-15+-000?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-ready-764abc?logo=redux&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3+-38B2AC?logo=tailwindcss&logoColor=white)

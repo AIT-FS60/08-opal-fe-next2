@@ -1,88 +1,195 @@
-##  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="22"/> Next.js + TypeScript + Redux + Axios + Formik Yup + Tailwind CSS
+# <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width="24" /> Next.js + TypeScript + Redux Toolkit + Axios + Formik/Yup + Tailwind CSS
 
-Перед началом не забудьте выполнить установку зависимостей:
+A clean, portfolio-ready starter showing a practical **Next.js** app setup with:
+- **TypeScript** (strict typing)
+- **Redux Toolkit** + **React Redux** (state management)
+- **Axios** (preconfigured instance; cookie-based auth ready)
+- **Formik** + **Yup** (forms & validation)
+- **Tailwind CSS** (fast, consistent styling)
+- Feature-first structure (auth / projects / tasks)
 
-```bash
-npm install
-```
-### Если что-то не установилось:
-   
-npm install formik yup  
-npm install @reduxjs/toolkit@latest  
-npm install axios clsx tailwind-merge  
-npm install react-redux  
-  
-.env:  
-NEXT_PUBLIC_API_URL=BACKEND_URL  
-
-### 🎨 Стилизация с Tailwind CSS
-
-Проект уже настроен с использованием **Tailwind CSS**.
-Рекомендуем потратить немного времени на изучение его синтаксиса, чтобы легко и эффективно стилизовать интерфейс.
-
-* Документация: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+> Use this as a starter or as a **Project Tracker** demo (Projects/Tasks).
 
 ---
 
-### 📡 Работа с API через Axios
+## 🔗 Live Demo
+_Add your deployment link here (Vercel/Netlify)._
 
-Для отправки запросов используется **Axios**.
-Глобальная конфигурация уже настроена и находится в папке:
+---
+
+## ✨ Features
+- Next.js (App Router) with server/client components
+- Centralized Axios instance: `/src/lib/axiosInstance.ts`
+- Cookie-based authentication support in the HTTP layer
+- Consistent form handling with **Formik** and **Yup**
+- Clear feature boundaries under `/features`
+- Tailwind utilities + optional helpers (`clsx`, `tailwind-merge`)
+- Example of redirect after successful action (sign-up flow)
+
+---
+
+## 🚀 Getting Started
+
+**Requirements**
+- Node.js 18+ and npm
+
+**Install dependencies**
+```bash
+npm install
+```
+
+**Dev server**
+```bash
+npm run dev
+# http://localhost:3000
+```
+
+**Build & run**
+```bash
+npm run build
+npm start
+```
+
+**Lint**
+```bash
+npm run lint
+```
+
+---
+
+## ⚙️ Environment
+
+Create `.env.local` in the project root:
+
+```
+NEXT_PUBLIC_API_URL=<BACKEND_URL>
+```
+
+> `NEXT_PUBLIC_*` variables are exposed to the browser (Next.js convention).
+
+---
+
+## 🎨 Styling (Tailwind CSS)
+
+The project ships with **Tailwind CSS** preconfigured.  
+Spend a few minutes with the syntax to style quickly and consistently.
+
+- Docs: https://tailwindcss.com/docs
+
+_Optional helpers already used:_
+- `clsx` — conditional class names
+- `tailwind-merge` — smart class merging
+
+---
+
+## 📡 API Layer (Axios)
+
+Global Axios config lives at:
 
 ```
 /src/lib/axiosInstance.ts
 ```
 
-✅ Поддержка cookie-based аутентификации .
+- Base URL reads from `NEXT_PUBLIC_API_URL`
+- `withCredentials: true` enables cookie-based auth
+- Interceptors are the single place for response/error handling
 
 ---
 
-### ⚠️ Обработка ошибок
+## ⚠️ Error Handling
 
-Пример обработки серверных ошибок можно найти в **authSlice** (`/features/auth/authSlice.ts`).
-
----
-
-### ✅ Редирект после успешных запросов
-
-Форма регистрации демонстрирует, как выполнять **редирект** после успешного действия:
-
-
----
-
-### 🗂️ Структура проекта
-
-#### 📁 `/app/{name}/page.tsx`
-
-Содержит **страницы приложения**, соответствующие маршрутам (routes).
-
-#### 📁 `/components`
-
-Хранятся **переиспользуемые UI-компоненты** и общие визуальные блоки, не относящиеся напрямую к конкретным фичам.
-
-#### 📁 `/features`
-
-Каждая фича (feature) — это **логически изолированная область приложения**:
+See a reference implementation in **authSlice**:
 
 ```
-features/
-  auth/         # Аутентификация
-  projects/     # Проекты
-  tasks/        # Таски
+/features/auth/authSlice.ts
 ```
 
-Внутри каждой фичи:
-
-| Папка       | Назначение                          |
-| ----------- | ----------------------------------- |
-| `slice.ts`  | Redux slice + бизнес-логика         |
-| `services/` | API-запросы, связанные с этой фичей |
-| `types.ts`  | Локальные типы для данной фичи      |
-| `routes.ts` | Список роутов к бекенду             |
-
-#### 📁 `/types`
-
-Глобальные типы, общие для всего приложения (например, `User`, `Tokens`, `ApiError` и т.д.).
+Centralized error mapping keeps UI components small and predictable.
 
 ---
 
+## ✅ Redirect After Success
+
+The **Sign-up** form demonstrates performing a **redirect** after a successful request  
+(e.g., navigate to `/projects` after registration or login).
+
+---
+
+## 🗂️ Project Structure
+
+### Pages & Routes
+```
+/app/{route}/page.tsx
+```
+Each folder under `/app` maps to a route.
+
+### Shared UI
+```
+/components
+```
+Re-usable presentation components not tied to a single feature.
+
+### Feature-First Modules
+```
+/features
+  auth/        # Authentication
+  projects/    # Projects
+  tasks/       # Tasks
+```
+Inside each feature:
+
+| Path         | Purpose                                  |
+|--------------|-------------------------------------------|
+| `slice.ts`   | Redux Toolkit slice + business logic      |
+| `services/`  | API requests for that feature             |
+| `types.ts`   | Local types for the feature               |
+| `routes.ts`  | Backend route definitions                 |
+
+### Global Types
+```
+/types
+```
+Cross-cutting types (e.g., `User`, `Tokens`, `ApiError`).
+
+---
+
+## 📜 NPM Scripts
+
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
+}
+```
+
+---
+
+## 🧩 If something didn’t install
+
+```bash
+npm install formik yup
+npm install @reduxjs/toolkit@latest react-redux
+npm install axios clsx tailwind-merge
+```
+
+---
+
+## 📷 Screenshots (optional for portfolio)
+
+_Add one or two images of the main screen (e.g., Projects) to showcase the UI._
+
+---
+
+## 📦 Deployment
+
+- **Vercel (recommended for Next.js)**: connect repo → add env vars → Deploy.
+- **Netlify**: Import from Git → Build `npm run build` → Publish `.next` (or use the official Next plugin).
+
+---
+
+## © License
+MIT — free to use in personal and commercial projects.
